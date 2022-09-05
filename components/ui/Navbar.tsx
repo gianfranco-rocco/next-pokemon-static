@@ -25,6 +25,7 @@ export const Navbar = () => {
                             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
                             width={70}
                             height={70}
+                            alt='Site image'
                         />
 
                         <div style={{
