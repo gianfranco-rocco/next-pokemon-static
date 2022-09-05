@@ -4,14 +4,17 @@ import { Layout } from '../../components/layouts';
 import { getPokemonForStaticProps } from '../../api/pokeApi';
 import { Pokemon } from '../../interfaces/pokemon-list';
 import { PokemonData } from '../../components/pokemon/PokemonData';
+import { capitalizeWord } from '../../utils/helpers';
 
 interface Props {
     pokemon: Pokemon;
 }
 
 const PokemonPage: NextPage<Props> = ({ pokemon }) => {
+    const pokemonName: string = capitalizeWord(pokemon.name);
+
     return (
-        <Layout title={pokemon.name}>
+        <Layout title={`Informacion sobre ${ pokemonName}`} pokemonName={pokemonName}>
             <PokemonData pokemon={pokemon} />
         </Layout>
     )
